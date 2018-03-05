@@ -1,0 +1,8 @@
+{
+  "source": ".",
+  "title": "Core Docs",
+  "css": ["styles.bundle.css"],
+  "homepage": "../kss/homepage.md",
+  "destination": "../../styleguide",
+  "builder": "../../node_modules/michelangelo/kss_styleguide/custom-template"
+}

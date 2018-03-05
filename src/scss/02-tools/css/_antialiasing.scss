@@ -1,0 +1,30 @@
+// antialiasing
+//
+// Sets the element antialiasing mode<br/>
+// <br/>Usage:
+//
+// * `antialiasing('antialiased');`
+//
+// <br/>Input:
+//
+// * `$type` - Antialiasing type - `(antialiased | auto)`
+//
+// <br/>Example:
+//
+//      .h1 {
+//        @include antialiasing('antialiased');
+//      }
+//
+// Style guide: Tools.Css.antialiasing
+@mixin antialiasing($type:antialiased) {
+  /* antialiased, none, subpixel-antialiased*/
+  @if $type == 'antialiased' {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: $type;
+    font-smoothing: $type;
+  } @else {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: $type;
+    font-smoothing: $type;
+  }
+}

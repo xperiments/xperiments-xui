@@ -1,0 +1,16 @@
+{
+    "useTabs": false,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "noSemi": true,
+    {
+      "overrides": [
+        {
+          "files": "*.scss",
+          "options": { "singleQuote": true }
+        }
+      ]
+    }
+}

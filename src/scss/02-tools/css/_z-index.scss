@@ -1,0 +1,27 @@
+// z-index
+//
+// Provides a simple way of <br/>
+// <br/>Usage:
+//
+// * `z-index('popup');`
+//
+// <br/>Input:
+//
+// * `$index` - Index Layer Name  `(string)`
+// * `$position` - Element positioning `('relative'|'absolute'|string)`
+//
+// <br/>Example:
+//
+//      .modal {
+//        @include z-index('modal');
+//      }
+//
+// Style guide: Tools.Css.accelerate
+@mixin z-index($index, $position: relative) {
+  @if map-has-key($s-zindex, $index) {
+    position: $position;
+    z-index: map-get($s-zindex, $index);
+  } @else {
+    @warn "The key #{$index} is not in the map '$s-zindex'";
+  }
+}

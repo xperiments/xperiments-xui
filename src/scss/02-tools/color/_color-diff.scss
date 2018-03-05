@@ -1,0 +1,76 @@
+// color-diff
+//
+// Computes the needed changes in hue/saturation/lightness to go from one color to another<br/>
+// <br/>**Usage:**
+//
+// * `$diff:color-diff(#f00, #f0f);`
+//
+// <br/>**Input:**
+//
+// * `$a` - Color A - `(string)`
+// * `$b` - Color B - `(string)`
+//
+// <br/>**Output:**
+//
+// *A list containing the needed color adjustments*
+//
+//      (
+//        adjust-hue: 42,
+//        saturation: 13.37%,
+//        lightness: 1.5%
+//      );
+//
+// <br/>**Example:**
+//
+//      // Pick two random colors
+//      $a: #BADA55;
+//      $b: #B0BCA7;
+//
+//      // Calculate the diff map between those 2
+//      $diff: color-diff($a, $b);
+//      // This is a map looking like this:
+//      // $diff: (
+//      //   adjust-hue: 42,
+//      //   saturation: 13.37%,
+//      //   lightness: 1.5%
+//      // );
+//
+//      // Apply the diff to one of the two colors to find the second one
+//      $c: apply-diff($a, $diff);
+//
+//      // Is everything okay?
+//      sass {
+//        a: $a;
+//        b: $b;
+//        c: $c; // $b == $c, awesome!
+//      }
+//
+// Style guide: Tools.Color.color-diff
+@function color-diff($a, $b) {
+  $sat: saturation($a) - saturation($b);
+  $lig: lightness($a) - lightness($b);
+  $fn-sat: if($sat > 0, 'desaturate', 'saturate');
+  $fn-lig: if($lig > 0, 'darken', 'lighten');
+
+  @return (adjust-hue: -(hue($a) - hue($b)),
+    #{$fn-sat}: abs($sat),
+    #{$fn-lig}: abs($lig));
+}
+
+// apply-diff
+//
+// Apply differences returned from `color-diff` function to a color, in order to retrieve the second color
+//
+// $color - color to transform
+// $diff  - diff map
+//
+// Styleguide Tools.Color.apply-diff
+@function apply-diff($color, $diff) {
+  // We call the $key (function),
+  // passing the $color and the $value as parameters
+  // e.g. `call(adjust-hue, #BADA55, 42)`
+  @each $key, $value in $diff {
+    $color: call($key, $color, $value);
+  }
+  @return $color;
+}

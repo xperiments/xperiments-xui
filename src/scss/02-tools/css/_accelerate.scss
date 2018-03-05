@@ -1,0 +1,26 @@
+// accelerate
+//
+// When you need to trigger hardware acceleration for some animation, keeping everything fast, slick and flicker-free.<br/>
+// <br/>Usage:
+//
+// * `accelerate($backface: true, $perspective: 1000);`
+//
+// <br/>Input:
+//
+// * `$backface` - Hide backface-visibility `(boolean)`
+// * `$perspective` - Perspective value `(number)`
+//
+// <br/>Example:
+//
+//      div {
+//        @include accelerate();
+//        @include accelerate(false);
+//      }
+//
+// Style guide: Tools.Css.accelerate
+@mixin accelerate($backface: true, $perspective: 1000) {
+  @if $backface {
+    backface-visibility: hidden;
+  }
+  perspective: $perspective;
+}

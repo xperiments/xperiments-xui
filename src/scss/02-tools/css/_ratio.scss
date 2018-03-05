@@ -1,0 +1,32 @@
+// ratio
+//
+// Use this for creating scalable elements (usually images / background images) that maintain a ratio.<br/>
+// <br/>Usage:
+//
+// * `@include ratio(16,9);`
+//
+// <br/>Input:
+//
+// * `$x` - width ratio (number)
+// * `$y` - height ratio (number)
+// * `$pseudo` - Use Pseudo Element (boolean|true)
+//
+// <br/>Example:
+//
+//      img {
+//        @include ratio(16,9);
+//      }
+//
+// Style guide: Tools.Css.ratio
+@mixin ratio($x, $y, $pseudo: false) {
+  $padding: unquote(($y / $x) * 100 + '%');
+  @if $pseudo {
+    &::before {
+      @include pseudo($pos: relative);
+      padding-top: $padding;
+      width: 100%;
+    }
+  } @else {
+    padding-top: $padding;
+  }
+}

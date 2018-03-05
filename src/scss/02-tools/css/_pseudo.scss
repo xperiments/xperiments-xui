@@ -1,0 +1,21 @@
+// pseudo
+//
+// Use this for creating scalable elements (usually images / background images) that maintain a ratio.<br/>
+// <br/>Usage:
+//
+// * `@include pseudo`
+//
+// <br/>Example:
+//
+//      div {
+//          @include pseudo;
+//          top: -1rem; left: -1rem;
+//          width: 1rem; height: 1rem;
+//      }
+//
+// Style guide: Tools.Css.pseudo
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}

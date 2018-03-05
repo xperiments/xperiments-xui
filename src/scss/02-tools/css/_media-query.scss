@@ -1,0 +1,29 @@
+/**
+
+  Media Query Utilitiles
+
+  The example below showing the padding and font-size increasing
+  once the viewport gets over 1024px.
+
+  .site-header {
+    padding: 2rem;
+    font-size: 1.8rem;
+    @include mq('tablet-wide') {
+      padding-top: 4rem;
+      font-size: 2.4rem;
+    }
+  }
+
+*/
+@mixin mq($width, $type: min) {
+  @if map-has-key($breakpoints, $width) {
+    $width: map-get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}

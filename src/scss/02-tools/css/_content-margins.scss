@@ -1,0 +1,43 @@
+/*
+	Force removing first/last child margins
+
+	example: default
+	.element {
+		@include content-margins;
+	}
+	output:
+	.element > *:first-child {
+		margin-top: 0;
+	}
+	.element > *:last-child {
+		margin-bottom: 0;
+	}
+	example: empty selector
+	.element {
+		@include content-margins('false');
+	}
+	output:
+	.element:first-child {
+		margin-top: 0;
+	}
+	.element:last-child {
+		margin-bottom: 0;
+	}
+*/
+
+@mixin content-margins($selector: '> *', $last-child: false) {
+  @if not $selector {
+    $selector: '&';
+  }
+
+  #{unquote($selector)} {
+    &:first-child {
+      margin-top: 0;
+    }
+    @if $last-child {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

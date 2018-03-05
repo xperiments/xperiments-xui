@@ -1,0 +1,26 @@
+// color
+//
+// Gets the provided color name value from the global **$colors** list.
+// <br/>Usage:
+//
+// * `color('primary');`
+//
+// <br/>Input:
+//
+// * `$key` - Color name - `(string)`
+//
+// <br/>Example:
+//
+//      .h1 {
+//        color: color('primary');
+//      }
+//
+// Style guide: Tools.Color.color
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
