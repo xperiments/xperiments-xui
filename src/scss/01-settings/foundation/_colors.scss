@@ -1,0 +1,16 @@
+// Colors - Brand
+//
+// |Color List|
+// |----------------|
+// |$f-colors|
+//
+// $f-color-sexy - #fa6acc; sexy
+// $f-color-glamour - #f02a52; glamour
+// $f-color-sky - #09a6e4; sky
+//
+// Styleguide Settings.Foundation.Colors
+$f-color-sexy: #fa6acc !default;
+$f-color-glamour: #f02a52 !default;
+$f-color-sky: #09a6e4 !default;
+
+$f-colors: (sexy: $f-color-sexy, glamour: $f-color-glamour, sky: $f-color-sky) !default;

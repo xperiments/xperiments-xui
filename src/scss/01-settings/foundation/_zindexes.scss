@@ -1,0 +1,25 @@
+// zIndexes
+//
+// The primary zIndexes.
+//
+// |zIndexes|index|
+// |---|---|
+// |modal|**9000**|
+// |overlay|**8000**|
+// |tray|**7000**|
+// |header|**6000**|
+// |footer|**5000**|
+//
+// |zIndexes List|
+// |----------------|
+// |modal, overlay, tray, header, footer|
+//
+// Styleguide Settings.Foundation.zIndex
+
+$f-zindex: (
+  modal: 9000,
+  overlay: 8000,
+  tray: 7000,
+  header: 6000,
+  footer: 5000
+);

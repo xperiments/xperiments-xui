@@ -1,0 +1,17 @@
+// Core
+//
+// Sets up the core font size.<br/><br/>
+//
+// **Current Core Settings**
+//
+// `$s-core__font-size: 16px !default;`
+//
+// Styleguide Settings.Core
+
+$s-core__font-size: 16px !default;
+
+////////////////////////////////////////////////////////////////////////////////
+//                               W A R N I N G                                //
+//                  DO NOT MODIFY ANYTHING BEYOND THIS POINT                  //
+////////////////////////////////////////////////////////////////////////////////
+@include type-check($s-core__font-size, '$s-core__font-size');

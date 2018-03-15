@@ -1,0 +1,56 @@
+// Colors - Grey
+//
+// |Grey Color List|
+// |----------------|
+// |$f-colors-grey|
+//
+// $f-color__white - #fff; white
+// $f-color__black - #000; black
+// $f-color__grey--ultra-light - #f2f2f2; grey--ultra-light
+// $f-color__grey--light - #e6e6e6; grey--light
+// $f-color__grey--semi-light - #cccccc; grey--semi-light
+// $f-color__grey - #b3b3b3; grey
+// $f-color__grey--semi-dark - #4d4d4d; grey--semi-dark
+// $f-color__grey--dark - #333333; grey--dark
+// $f-color__grey--ultra-dark - #1a1a1a; grey--ultra-dark
+// $f-color__white--transparent - rgba(255,255,255,0); white--transparent
+// $f-color__black--transparent - rgba(0,0,0,0); black--transparent
+//
+// Styleguide Settings.Foundation.Colors-Grey
+
+// Black & White
+
+$f-color__white: #fff !default;
+$f-color__black: #000 !default;
+
+// Grey shades (Mid tones are missing intentionally)
+
+$f-color__grey--ultra-light: darken($f-color__white, 5%) !default;
+$f-color__grey--light: darken($f-color__white, 10%) !default;
+$f-color__grey--semi-light: darken($f-color__white, 20%) !default;
+$f-color__grey: darken($f-color__white, 30%) !default;
+$f-color__grey--semi-dark: darken($f-color__white, 70%) !default;
+$f-color__grey--dark: darken($f-color__white, 80%) !default;
+$f-color__grey--ultra-dark: darken($f-color__white, 90%) !default;
+
+// Transparent colors
+
+$f-color__white--transparent: rgba($f-color__white, 0) !default;
+$f-color__black--transparent: rgba($f-color__black, 0) !default;
+
+// Neutral color map
+
+$f-colors-grey: (
+    'white': $f-color__white,
+    'black': $f-color__black,
+    'grey--ultra-light': $f-color__grey--ultra-light,
+    'grey--light': $f-color__grey--light,
+    'grey--semi-light': $f-color__grey--semi-light,
+    'grey': $f-color__grey,
+    'grey--semi-dark': $f-color__grey--semi-dark,
+    'grey--dark': $f-color__grey--dark,
+    'grey--ultra-dark': $f-color__grey--ultra-dark,
+    'white--transparent': $f-color__white--transparent,
+    'black--transparent': $f-color__black--transparent
+  )
+  !default;

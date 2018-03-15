@@ -1,0 +1,24 @@
+table {
+  font-family: 'Lato';
+  text-align: left;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+th {
+  font-weight: bold;
+  padding: 10px 8px;
+}
+
+tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+td {
+  padding: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.kss-section__source {
+  display: none;
+}

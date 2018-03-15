@@ -1,0 +1,52 @@
+// Breakpoints
+//
+// Current Defined Breakpoints expressed in PX
+//
+// |Breakpoint|Size|
+// |---|---|
+// |$f-breakpoint--xxs|**1px**|
+// |$f-breakpoint--xs|**480px**|
+// |$f-breakpoint--sm|**600px**|
+// |$f-breakpoint--sml|**840px**|
+// |$f-breakpoint--md|**960px**|
+// |$f-breakpoint--lg|**1280px**|
+// |$f-breakpoint--xl|**1440px**|
+// |$f-breakpoint--xxl|**1600px**|
+// |$f-breakpoint--xxxl|**1920px**|
+//
+// |Breakpoints List|
+// |----------------|
+// |xxs, xs, sm, sml, md, lg, xl, xxl, xxxl|
+//
+// Styleguide Settings.Foundation.Breakpoints
+
+$f-breakpoint--xxs: 1px !default;
+$f-breakpoint--xs: 480px !default;
+$f-breakpoint--sm: 600px !default;
+$f-breakpoint--sml: 840px !default;
+$f-breakpoint--md: 960px !default;
+$f-breakpoint--lg: 1280px !default;
+$f-breakpoint--xl: 1440px !default;
+$f-breakpoint--xxl: 1600px !default;
+$f-breakpoint--xxxl: 1920px !default;
+
+// Breakpoints map
+
+$f-breakpoints: (
+    'xxs': $f-breakpoint--xxs,
+    'xs': $f-breakpoint--xs,
+    'sm': $f-breakpoint--sm,
+    'sml': $f-breakpoint--sml,
+    'md': $f-breakpoint--md,
+    'lg': $f-breakpoint--lg,
+    'xl': $f-breakpoint--xl,
+    'xxl': $f-breakpoint--xxl,
+    'xxxl': $f-breakpoint--xxxl
+  )
+  !default;
+
+////////////////////////////////////////////////////////////////////////////////
+//                               W A R N I N G                                //
+//                  DO NOT MODIFY ANYTHING BEYOND THIS POINT                  //
+////////////////////////////////////////////////////////////////////////////////
+@include type-check($f-breakpoints, '$f-breakpoints');

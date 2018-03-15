@@ -1,61 +1,25 @@
-// Mixins: Grid - 2 column with gutter
+// fluid-property
 //
-// Custom grid, fully fluid to 100% of the container
-//
-// Usage:
-//
-// * `@include grid-flexi-x2(66/407, 11/407, 330/407);`
-//
-// Layout:
-//
-// * 1 row, containing 2 columns, separated by 1 gutter
-//
-// Parameters:
-//
-// * `$col1_width_nounit` - width of first column, divided by total width of container
-// * `$gutter_width_nounit` - width of gutter, divided by total width of container
-// * `$col2_width_nounit` - width of last column, divided by total width of container
-//
-// ~
+// http://www.adrenalinmedia.com.au/the-agency/insights/this-changes-everything-css-fluid-properties.aspx
 //
 // Markup:
-// <div class="debug">
-//     <div class="grid-flexi-test">
-//         <div class="col">
-//             column 1
-//         </div>
-//         <div class="col">
-//             column 2
-//         </div>
-//     </div>
-//     <!-- /.grid-flexi-x2 -->
-// </div>
+// <style>
+//  h1 {
+// 	  @include fluid-property(font-size, 50, 100);
+//  }
+//  h1 {
+// 	  font-size: calc(3.125vw + 40px);
+//  }
+//  @media (max-width:320px){
+// 	  font-size:50px;
+//  }
+//  @media (min-width:1920px){
+// 	  font-size:100px;
+//  }
+// </style>
 //
 // Style guide: Tools.Css.fluid
-/*
-	Fluid Property
-	http://www.adrenalinmedia.com.au/the-agency/insights/this-changes-everything-css-fluid-properties.aspx
-	HTML:
-	<h1 class="element">
-		<span>Text to replace</span>
-	</h1>
-	example:
-	h1 {
-		@include fp(font-size, 50, 100); // 50px at 320, 100px at 1920;
-	}
-	output:
-	h1 {
-		font-size: calc(3.125vw + 40px); //This is the magic!
-	}
-	@media (max-width:320px){ //Clips the start to the min value
-		font-size:50px;
-	}
-	@media (min-width:1920px){ //Clips the end to the max value
-		font-size:100px;
-	}
-*/
-
-@mixin fp($property, $min, $max, $start: 320, $end: breakpoint('desktop'), $clip: true, $clip-at-start: true, $clip-at-end: true) {
+@mixin fluid-property($property, $min, $max, $start: 320, $end: breakpoint('desktop'), $clip: true, $clip-at-start: true, $clip-at-end: true) {
   $start: $start / ($start * 0 + 1);
   $end: $end / ($end * 0 + 1);
   $multiplier: ($max - $min) / ($end - $start) * 100;

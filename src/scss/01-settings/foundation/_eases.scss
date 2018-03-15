@@ -1,0 +1,88 @@
+// Easing
+//
+// Predefined easing equations
+//
+// |Easing|Variable|
+// |---|---|
+// |cubic|$f-ease--[in/out/in-out]-cubic|
+// |circ|$f-ease--[in/out/in-out]-circ|
+// |expo|$f-ease--[in/out/in-out]-expo|
+// |quad|$f-ease--[in/out/in-out]-quad|
+// |quart|$f-ease--[in/out/in-out]-quart|
+// |quint|$f-ease--[in/out/in-out]-quint|
+// |sine|$f-ease--[in/out/in-out]-sine|
+// |back|$f-ease--[in/out/in-out]-back|
+//
+// Styleguide Settings.Foundation.Easing
+
+//  Cubic
+$f-ease--in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$f-ease--out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$f-ease--in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+//	Circ
+$f-ease--in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$f-ease--out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+$f-ease--in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+//	Expo
+$f-ease--in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$f-ease--out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$f-ease--in-out-expo: cubic-bezier(1, 0, 0, 1);
+
+//	Quad
+$f-ease--in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$f-ease--out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$f-ease--in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+//	Quart
+$f-ease--in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$f-ease--out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$f-ease--in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+
+//	Quint
+$f-ease--in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$f-ease--out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$f-ease--in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+
+//	Sine
+$f-ease--in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$f-ease--out-sine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$f-ease--in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+//	Back
+$f-ease--in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$f-ease--out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$f-ease--in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+//	Smooth fade
+$f-ease--smooth-fade: cubic-bezier(0.365, 0.005, 0.355, 1);
+
+$f-eases: (
+    'in-cubic':$f-ease--in-cubic,
+    'out-cubic':$f-ease--out-cubic,
+    'in-out-cubic':$f-ease--in-out-cubic,
+    'in-circ':$f-ease--in-circ,
+    'out-circ':$f-ease--out-circ,
+    'in-out-circ':$f-ease--in-out-circ,
+    'in-expo':$f-ease--in-expo,
+    'out-expo':$f-ease--out-expo,
+    'in-out-expo':$f-ease--in-out-expo,
+    'in-quad':$f-ease--in-quad,
+    'out-quad':$f-ease--out-quad,
+    'in-out-quad':$f-ease--in-out-quad,
+    'in-quart':$f-ease--in-quart,
+    'out-quart':$f-ease--out-quart,
+    'in-out-quart':$f-ease--in-out-quart,
+    'in-quint':$f-ease--in-quint,
+    'out-quint':$f-ease--out-quint,
+    'in-out-quint':$f-ease--in-out-quint,
+    'in-sine':$f-ease--in-sine,
+    'out-sine':$f-ease--out-sine,
+    'in-out-sine':$f-ease--in-out-sine,
+    'in-back':$f-ease--in-back,
+    'out-back':$f-ease--out-back,
+    'in-out-back':$f-ease--in-out-back,
+    'smooth-fade':$f-ease--smooth-fade
+  )
+  !default;

@@ -1,8 +1,9 @@
 {
   "source": ".",
   "title": "Core Docs",
-  "css": ["styles.bundle.css"],
-  "homepage": "../kss/homepage.md",
+  "css": ["kss.custom.css", "styles.bundle.css"],
+  "homepage": "styleguide.md",
   "destination": "../../styleguide",
-  "builder": "../../node_modules/michelangelo/kss_styleguide/custom-template"
+  "builder": "../../node_modules/michelangelo/kss_styleguide/custom-template",
+  "nav-depth": 4
 }

@@ -1,0 +1,51 @@
+// Spaces
+//
+// Base spaces naming and value pairing<br/>
+// Modifying these variables can break the vertical rhythm.
+//
+// |Space Name|Size|
+// |---|---|
+// |$f-space|24px|
+// |$f-space--none|0|
+// |$f-space--tiny|$f-space * .25|
+// |$f-space--small|$f-space * .5|
+// |$f-space--medium|$f-space * 1|
+// |$f-space--large|$f-space * 2|
+// |$f-space--huge|$f-space * 4|
+//
+// |Space List|
+// |----------------|
+// |none, tiny, small, medium, large|
+//
+// Styleguide Settings.Foundation.Spaces
+
+// Main space
+
+$f-space: 24px !default;
+
+// Space variants
+
+$f-space--none: 0 !default;
+$f-space--tiny: round($f-space * 0.25) !default;
+$f-space--small: round($f-space * 0.5) !default;
+$f-space--medium: round($f-space * 1) !default;
+$f-space--large: round($f-space * 2) !default;
+$f-space--huge: round($f-space * 4) !default;
+
+// Spaces map
+
+$f-spaces: (
+    'none': $f-space--none,
+    'tiny': $f-space--tiny,
+    'small': $f-space--small,
+    'medium': $f-space--medium,
+    'large': $f-space--large,
+    'huge': $f-space--huge
+  )
+  !default;
+
+////////////////////////////////////////////////////////////////////////////////
+//                               W A R N I N G                                //
+//                  DO NOT MODIFY ANYTHING BEYOND THIS POINT                  //
+////////////////////////////////////////////////////////////////////////////////
+@include type-check($f-spaces, '$f-spaces');

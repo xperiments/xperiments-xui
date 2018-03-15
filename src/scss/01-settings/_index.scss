@@ -3,7 +3,7 @@
 // Weight: -100
 //
 // Styleguide Settings
-@import 'breakpoints';
-@import 'colors';
-@import 'fonts';
-@import 'z-index';
+@import 'config';
+@import 'extensions/index';
+@import 'core';
+@import 'foundation/index';

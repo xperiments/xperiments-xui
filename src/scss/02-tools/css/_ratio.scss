@@ -11,11 +11,17 @@
 // * `$y` - height ratio (number)
 // * `$pseudo` - Use Pseudo Element (boolean|true)
 //
-// <br/>Example:
-//
-//      img {
-//        @include ratio(16,9);
-//      }
+// Markup:
+// <style>
+//  // Input
+//  img {
+//    @include ratio(16,9);
+//  }
+//  // Output
+//  img {
+//    padding-top: 56.25%;
+//  }
+// </sytle>
 //
 // Style guide: Tools.Css.ratio
 @mixin ratio($x, $y, $pseudo: false) {

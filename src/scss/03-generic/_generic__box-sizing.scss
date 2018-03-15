@@ -1,0 +1,21 @@
+// box-sizing
+//
+// More sensible default box-sizing:
+// http://www.css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+//
+// Style guide: Generic.BoxSizing
+
+$g-box-sizing: border-box !default;
+
+// Apply box sizing from root html tag
+html {
+  box-sizing: $g-box-sizing;
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}

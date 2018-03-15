@@ -5,13 +5,25 @@
 //
 // * `@include pseudo`
 //
-// <br/>Example:
-//
-//      div {
-//          @include pseudo;
-//          top: -1rem; left: -1rem;
-//          width: 1rem; height: 1rem;
-//      }
+// Markup:
+// <style>
+//   // Input
+//  .cls {
+//    &::after {
+//      @include pseudo;
+//      color: red;
+//    }
+//  }
+//  // Output
+//  .cls {
+//    &::after {
+//      content: '';
+//      display: block;
+//      position: absolute;
+//      color: red;
+//    }
+//  }
+// </style>
 //
 // Style guide: Tools.Css.pseudo
 @mixin pseudo($display: block, $pos: absolute, $content: '') {

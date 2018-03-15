@@ -1,0 +1,31 @@
+// type-check
+//
+// Check that a list only contain certain units
+//
+// Style guide: Settings.Extensions.type-check
+$type-check-error: '[ #{$s-config__project-name} - TYPE CHECK ERROR ] ';
+
+@mixin type-check($list, $listName:'__list___', $unit:'px') {
+  @if length($list) == 1 {
+    $value: nth($list, 1);
+    @if (type-of($value) == number) {
+      @if (unit($value) != $unit) {
+        @error "#{$type-check-error} `#{$listName}` needs to be a pixel value.";
+      }
+    } @else {
+      @error "#{$type-check-error} `#{$listName}` needs to be a number.";
+    }
+  } @else {
+    @each $key, $value in $list {
+      @if (type-of($value) == number) {
+        @if ($key != 'none') {
+          @if (unit($value) != $unit) {
+            @error "#{$type-check-error} `#{$listName}`: `#{$key}` needs all elements to be a pixel value.";
+          }
+        }
+      } @else {
+        @error "#{$type-check-error} `#{$listName}`: `#{$key}` needs all elements to be a number.";
+      }
+    }
+  }
+}
